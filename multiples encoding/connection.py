@@ -19,7 +19,7 @@ def send(msg):
     client.send(message)
     
 
-enigma = client.recv(2048).decode(FORMAT)
-enigma = enigma.split(' ')
-print(enigma[-2])
-
+msg = client.recv(2048).decode(FORMAT)
+print(msg)
+enigma = msg.split(' ')[-2]
+print(f"The code to decipher is : {enigma}")
