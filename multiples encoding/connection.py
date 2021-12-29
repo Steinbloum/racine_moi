@@ -1,4 +1,5 @@
 import socket
+import time
 
 HEADER = 64
 PORT = 52017
@@ -19,7 +20,15 @@ def send(msg):
     client.send(message)
     
 
+
+
 msg = client.recv(2048).decode(FORMAT)
 print(msg)
 enigma = msg.split(' ')[-2]
+enigma = enigma.strip("'")
+enigma = enigma[:-4]
+if "/" in enigma:
+    print('This is morse')
 print(f"The code to decipher is : {enigma}")
+print(client.recv(2048).decode(FORMAT))
+    
