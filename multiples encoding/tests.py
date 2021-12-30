@@ -1,11 +1,19 @@
 import base64
 import codecs
-enigma = 'b9HcKa&2L9c4cgDb#rWa'
+import binascii
+enigma = 'cW-QFX>(`'
 enigma.strip("'")
 print(enigma)
-enigma = bytes(enigma, 'UTF-8')
-enigma = enigma.decode('UTF-8')
-
+enigma = base64.b85decode(enigma)
+enigma = enigma.decode('ascii')
+print(type(enigma))
+# print(enigma)
+# enigma = binascii.hexlify(enigma)
+# print(enigma)
+# enigma = bytes.fromhex(enigma)
+# enigma = enigma.decode('ascii')
+# print(enigma)
+# # print(decode)
 
 
 print(enigma)

@@ -451,3 +451,36 @@ console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkErr
 
 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1640866406515	geckodriver	INFO	Listening on 127.0.0.1:56581
+1640866406522	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "39823" "-no-remote" "-profile" "/tmp/rust_mozprofile7PUIwN"
+1640866408726	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile7PUIwN/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:39823/devtools/browser/389f9854-8634-4613-ac1f-df39ffeff072
+1640866411494	Marionette	INFO	Listening on port 35833
+1640866411837	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640866414295	Marionette	INFO	Stopped listening on port 35833
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640866537086	geckodriver	INFO	Listening on 127.0.0.1:49265
+1640866537096	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "52747" "-no-remote" "-profile" "/tmp/rust_mozprofiletTM61e"
+1640866539338	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiletTM61e/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52747/devtools/browser/a4721b88-f277-4ee4-9e86-72f387b5cfee
+1640866541850	Marionette	INFO	Listening on port 35751
+1640866542159	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640866720784	geckodriver	INFO	Listening on 127.0.0.1:60529
+1640866720791	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "47433" "-no-remote" "-profile" "/tmp/rust_mozprofile86RU2k"
+1640866723149	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile86RU2k/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:47433/devtools/browser/c46676ed-353c-452d-b555-b2f594595a01
+1640866725563	Marionette	INFO	Listening on port 37571
+1640866725953	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640866731593	Marionette	INFO	Stopped listening on port 37571
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.

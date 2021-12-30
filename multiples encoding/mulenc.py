@@ -1,3 +1,4 @@
+import binascii
 from contextlib import ExitStack
 import string
 import base64
@@ -46,7 +47,7 @@ class Decypher():
             enigmabytes = base64.b64decode(str_bytes)
             enigma = enigmabytes.decode('ascii')
             return enigma
-        except UnicodeDecodeError:
+        except Exception:
             print("not b64")
             
         try:
@@ -58,6 +59,11 @@ class Decypher():
         except Exception:
             print('there is a problem here')
 
+    def decode_b85(self, enigma):
+        enigma = base64.b85decode(enigma)
+        enigma = enigma.decode('ascii')
+        print('DECODED B85')
+        return enigma
 
     def decode_hex(self, enigma):
         enigma = bytes.fromhex(enigma)
@@ -77,6 +83,9 @@ class Decypher():
         if all(c in string.hexdigits for c in enigma):
             print("it's hexadecimal")
             return "hex"
+        
+        else:
+            return "b85"
 
 
     def format_enigma(self, enigma):
@@ -97,6 +106,8 @@ class Decypher():
             return self.decode_b64(sample)
         elif encoding_format == "hex":
             return self.decode_hex(sample)
+        elif encoding_format =="b85":
+            return self.decode_b85(sample)
     
 
 
