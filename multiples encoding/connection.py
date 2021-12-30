@@ -1,6 +1,6 @@
 import socket
 import time
-from mulenc import morse_decrypter
+from mulenc import d
 
 HEADER = 64
 PORT = 52017
@@ -26,18 +26,18 @@ def send(msg):
 while True:
     msg = client.recv(2048).decode(FORMAT)
     print(msg)
-    enigma = msg.split(' ')[-2]
-    # print(enigma)
-    enigma = enigma.split('\n')[0]
-    # print(enigma)
-    enigma = enigma.strip("'")
-    # print(enigma)
-    # print(f'The message to decypher is {enigma}')
-    if "." in enigma:
-        print('This is morse')
-        answer = morse_decrypter(enigma)
-        print(f'The answer is {answer}')
-        send(f'{answer.lower()}\n')
+    answer = d.run_decypher(msg)
+    print(f'The answer is {answer}')
+    send(f'{answer}\n')
+    # enigma = msg.split(' ')[-2]
+    # # print(enigma)
+    # enigma = enigma.split('\n')[0]
+    # # print(enigma)
+    # enigma = enigma.strip("'")
+    # # print(enigma)
+    # # print(f'The message to decypher is {enigma}')
+
+    # send(f'{answer.lower()}\n')
 
 # print(f"The code to decipher is : {enigma}")
 # print(client.recv(2048).decode(FORMAT))
