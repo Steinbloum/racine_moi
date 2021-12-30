@@ -18,6 +18,7 @@ def send(msg):
     send_lenght += b' ' *(HEADER - len(send_lenght))
     client.send(send_lenght)
     client.send(message)
+    print(client.recv(2048).decode(FORMAT))
     
 
 
